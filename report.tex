@@ -1,0 +1,79 @@
+\documentclass[12pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{hyperref}
+
+\title{Modeling and Analysis of a Product Distribution Network with PROMELA}
+\author{Your Name}
+\date{Month Year}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+In this report, we present the modeling and analysis of a product distribution network (PDN) using the PROMELA language and the SPIN model checker. The project aims to study the impact of supply disruptions, truck failures, and high demand on the resilience of the PDN. We implement processes to represent warehouses, trucks, shops, and customers, and we monitor the system state by saving it in JSON format for further analysis. Finally, we visualize the resulting data using Python to better understand the system's behavior.
+\end{abstract}
+
+\tableofcontents
+
+\chapter{Introduction}
+\section{Background}
+\section{Problem Statement}
+
+In your project, you'll model a product distribution network (PDN) with the primary components being warehouses, trucks, shops, shelves, and customers. PROMELA is a suitable choice for modeling this system due to its ability to handle random and infrequent events like supply outages, truck failures, and high demand. The primary focus will be on analyzing the resilience of the system under various conditions.
+Warehouses: These serve as the primary storage facilities for products before they are distributed to various shops. Warehouses receive products from manufacturers and store them until they are ready for distribution. Each warehouse can have a limited storage capacity, and they might be located at different locations within the distribution network.
+Trucks: Trucks are responsible for transporting products from warehouses to shops. They have a limited capacity and can experience random failures or delays due to road outages. In the model, trucks can be represented as processes that move products between warehouses and shops.
+Shops: Shops are the final points of sale for customers. They receive products from trucks and store them on shelves for customers to purchase. Each shop has a limited storage capacity on its shelves and can request more products from warehouses when needed.
+Shelves: Shelves are located within shops and hold products for customers to purchase. Each shelf has a limited capacity, and when products run out, they must be replenished from the shop's storage or by requesting more supplies from the warehouse.
+Customers: Customers arrive at shops at
+To analyze the impact of supply outages, broken trucks, and high demand, you can simulate different scenarios and introduce random events that affect the system. For example:
+Supply outages: Introduce random events where warehouses experience temporary outages, disrupting the flow of products to shops. Measure the impact on shop availability and customer satisfaction.
+Broken trucks: Simulate random truck failures or delays, affecting the timely delivery of products from warehouses to shops. Analyze how this affects the overall resilience of the distribution network.
+High demand: Model situations where customer demand spikes or remains consistently high, causing congestion and out-of-stock situations in shops. Investigate how the system copes with increased demand and whether it can maintain resilience.
+By modeling the PDN with PROMELA and simulating various scenarios, you'll be able to analyze the system's resilience and fault tolerance under different conditions. This will help identify potential weak points in the network and explore strategies for improving its overall performance.
+
+
+\section{Objectives}
+
+\chapter{Modeling the Product Distribution Network with PROMELA}
+\section{PROMELA Overview}
+\section{PDN Components}
+\subsection{Warehouses}
+\subsection{Trucks}
+\subsection{Shops}
+\subsection{Shelves}
+\subsection{Customers}
+\section{Modeling Supply Outages and Failures}
+\section{Modeling High Demand}
+
+\chapter{Monitoring and Data Export}
+\section{Monitoring Process}
+\section{Exporting Data to JSON}
+\section{Integration with C++ Code}
+
+\chapter{Data Analysis and Visualization with Python}
+\section{Loading JSON Data}
+\section{Processing Data with Pandas}
+\section{Visualizing Data with Matplotlib}
+
+\chapter{Results and Discussion}
+\section{Key Findings}
+\section{Implications}
+\section{Limitations}
+
+\chapter{Conclusion}
+\section{Summary}
+\section{Future Work}
+
+\appendix
+\chapter{Appendix A: PROMELA Code}
+\chapter{Appendix B: C++ Code}
+\chapter{Appendix C: Python Visualization Script}
+
+\end{document}
+
